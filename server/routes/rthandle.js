@@ -143,8 +143,7 @@ router.route('/add').post(async (req, res) => {
 router.route('/contacts').get(async (req, res) => {
   console.log('SERVER Finding Cont Details');
   const alcont = await getContacts({});
-  // console.log('ALL DET', alcont);
-  res.json({ data: alcont });
+  res.json({ data: alcont.reverse() });
 });
 
 router
